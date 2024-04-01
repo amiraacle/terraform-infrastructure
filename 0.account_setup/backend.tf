@@ -4,3 +4,4 @@ terraform {
     prefix = "/dev/Users/adiletkhasanov/git-repositories/main-project/0.account_setup"
   }
 }
+   

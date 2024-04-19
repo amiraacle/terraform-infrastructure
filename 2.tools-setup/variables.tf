@@ -61,3 +61,26 @@ variable "vault-config" {
     chart_version            = "0.22.1"
   }
 }
+
+# variable configurations for argocd helm chart deployment
+variable "prometheus-config" {
+  type        = map(any)
+  description = "Please define prometheus configurations"
+  default = {
+    deployment_name = "prometheus"
+    chart_version   = "15.17.0"
+
+  }
+}
+
+# variable configurations for argocd helm chart deployment
+variable "grafana-config" {
+  type        = map(any)
+  description = "Please define prometheus configurations"
+  default = {
+    deployment_name = "grafana"
+    chart_version   = "6.43.3"
+    adminUser       = "admin"
+    adminPassword   = "password"
+  }
+}
